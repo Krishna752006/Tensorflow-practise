@@ -61,3 +61,7 @@ pred0 = predictions[0]
 print(pred0)
 label0 = np.argmax(pred0)
 print(label0)
+
+model.save("a1.keras")
+new_model = keras.models.load_model("a1.keras")
+new_model.evaluate(x_test,y_test,verbose = True)
